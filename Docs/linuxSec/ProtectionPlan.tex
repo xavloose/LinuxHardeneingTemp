@@ -2,23 +2,30 @@
   The first thing that we will be doing is logining as root and changing the password. This is as simple as follows:
 
   \$ su
+
   \$ passwd
 
   The next thing would be to mark every user as expired. This can be quickly done with the chage command which will also make the user incapable of loggin in as ssh. You want to view the /etc/passwd file to see who the users are.
 
   \$ cat /etc/passwd
+
   \$ chage -E 0 username
 
   Next install the cusom kernel that has been prebuilt. Debian-like systems will use the .deb packages and RHEL-like will use the *.rpm. The following commands will show how to install them.
 
   \$ dpkg -i *.deb
+
   \$ yum install *.rpm
 
   The kernels are in the software packages directory. The kernel is patched with grsecurity. In order to utilize the extra functionality you will need to download the pax tools from the grsecurity.org website and install. After this basic hardening should be done.
 
 \section{Docker}
   \$ yum install -y yum-utils
+
   \$ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
   \$ yum-config-manager --enable docker-ce-edge
+
   \$ yum makecache fast
+  
   \$ yum install -y docker-ce
