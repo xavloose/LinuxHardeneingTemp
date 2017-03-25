@@ -1,0 +1,61 @@
+\documentclass[11pt, letterpaper, oneside, titlepage]{article}
+\usepackage{fontspec}
+  \setmainfont{Hack}
+\usepackage{geometry}
+  \geometry{left=2cm, top=2.5cm, right=2cm, bottom=2cm} % Configure page margins with geometry
+\usepackage{listings}
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Useful Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\commandLine}[1]{
+%  \lstset{language=bash}
+%  \begin{lstlisting}[frame=single]^^n
+%    #1^^n
+%  \end{lstlisting}
+%}
+
+\title{University of South Dakota CCDC *nix Documentation \\\large We Laugh in the Face of a God}
+\author{ Xavier Loose \\ xav.loose@gmail.com \\ github.com/xavloose \and Zhixiu Lu \\ Zhixiu.Lu@coyotes.usd.edu }
+\date{\today}
+
+\begin{document}
+
+  \maketitle
+  %\commandLine{wget pussy}
+  %-----------------------------------------------------------------------------
+  % This is where text is imported. linuxSec/IntroTemplate.tex can be used as
+  %   guide for developing a section
+  %
+  % Adding a section should follow the following format
+  % \part{Name of Section}
+  %   \input{relative/file/location/filename.tex}
+  %   \input{relative/file/location/filename2.tex}
+  %   ...
+  %   \newpage
+  %-----------------------------------------------------------------------------
+  \part{Introduction}
+    \input{linuxSec/IntroTemplate.tex}
+    \input{linuxSec/ProtectionPlan.tex}
+    \newpage
+  \part{Phase 1}
+    \input{linuxSec/Stage1.tex}
+    \newpage
+  \part{Phase 2}
+    \input{linuxSec/Stage2.tex}
+    \newpage
+  \part{Phase 3}
+    \input{linuxSec/Stage3.tex}
+    \newpage
+  \part{Linux Kernel}
+    \input{linuxSec/KernelSecurity.tex}
+    \input{linuxSec/InstallingAKernel.tex}
+    \input{linuxSec/BuildingAKernel.tex}
+    \newpage
+  \part{Linux GRSecurity}
+    %\newpage
+  \part{Linux SELinux}
+    %\newpage
+  \part{ModSecurity}
+    \input{linuxSec/ModSecurity.tex}
+    \newpage
+\end{document}
